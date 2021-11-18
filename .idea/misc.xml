@@ -7,9 +7,10 @@
         <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/drawable/shape_textfield.xml" value="0.2203125" />
         <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/drawable/shape_textfield_selecionado.xml" value="0.2203125" />
         <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/drawable/textfield_selecionado.xml" value="0.2203125" />
-        <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/layout/activity_inserir_usuario.xml" value="0.125" />
+        <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/layout/activity_inserir_usuario.xml" value="0.25" />
+        <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/layout/activity_listar_usuario.xml" value="0.1" />
         <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/layout/activity_manter_usuario.xml" value="0.125" />
+        <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/layout/activity_manter_usuario.xml" value="0.33" />
         <entry key="..\:/Users/fabri/Documents/Android/AppComBancoDeDados/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2203125" />
       </map>
     </option>

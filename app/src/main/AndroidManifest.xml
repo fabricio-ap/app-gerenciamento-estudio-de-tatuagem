@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppComBancoDeDados">
         <activity
+            android:name=".view.manterusuario.ListarUsuario"
+            android:exported="false" />
+        <activity
             android:name=".view.manterusuario.InserirUsuario"
             android:exported="false" />
         <activity

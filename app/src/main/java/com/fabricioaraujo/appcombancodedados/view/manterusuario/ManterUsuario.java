@@ -13,7 +13,7 @@ import com.fabricioaraujo.appcombancodedados.R;
 
 public class ManterUsuario extends AppCompatActivity {
 
-    private Button btn_inserir;
+    private Button btn_inserir, btn_listar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +33,19 @@ public class ManterUsuario extends AppCompatActivity {
                 startActivity(intent_inserir);
             }
         });
+
+        btn_listar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_listar = new Intent(getApplicationContext(), ListarUsuario.class);
+                startActivity(intent_listar);
+            }
+        });
     }
 
     public void iniciar_componentes() {
         btn_inserir = findViewById(R.id.btn_inserir);
+        btn_listar = findViewById(R.id.btn_listar);
     }
 
     public boolean onOptionsItemSelected(MenuItem item){

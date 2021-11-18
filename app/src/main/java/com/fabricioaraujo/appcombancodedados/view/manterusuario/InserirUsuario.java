@@ -63,7 +63,7 @@ public class InserirUsuario extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent myIntent = new Intent(getApplicationContext(), ManterUsuario.class);
         startActivity(myIntent);
         return true;
     }
