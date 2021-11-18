@@ -6,14 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".view.manterusuario.ManterUsuario">
 
-    <Button
-        android:id="@+id/btn_inserir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginBottom="486dp"
-        android:text="Inserir"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:orientation="vertical"
+            style="@style/container">
+
+            <TextView android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="35sp"
+                android:text="Usuário" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            style="@style/container">
+
+            <Button
+                android:id="@+id/btn_inserir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inserir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_listar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Listar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
