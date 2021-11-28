@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.75"
+            android:layout_weight="2"
             android:orientation="vertical"
             style="@style/container">
 
@@ -23,7 +23,9 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="35sp"
-                android:text="Usuário" />
+                android:text="Usuário"
+                android:layout_marginTop="40dp"
+                style="@style/titulo"/>
 
         </LinearLayout>
 
@@ -37,16 +39,32 @@
             <Button
                 android:id="@+id/btn_inserir"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:text="Inserir"
+                app:icon="@drawable/add"
+                app:iconGravity="textStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
                 android:id="@+id/btn_listar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
                 android:text="Listar"
+                app:icon="@drawable/lista"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_buscar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:text="Buscar"
+                app:icon="@drawable/pesquisar"
+                app:iconGravity="textStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 

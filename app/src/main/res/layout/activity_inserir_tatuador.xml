@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.manterusuario.InserirUsuario">
+    tools:context=".view.mantertatuador.InserirTatuador">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,8 +13,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.75"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:orientation="vertical"
             style="@style/container">
 
@@ -23,7 +24,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="35sp"
-                android:layout_marginTop="40dp"
                 android:text="Cadastro" />
 
         </LinearLayout>
@@ -35,56 +35,70 @@
             android:orientation="vertical"
             style="@style/container">
 
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_usuario"
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_nome"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="Login" >
+                android:hint="Nome" >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_usuario"
+                    android:id="@+id/txt_nome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_senha"
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_idade"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="Senha" >
+                android:hint="Idade" >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_senha"
+                    android:id="@+id/txt_idade"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_status"
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_genero"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:hint="Status" >
+                android:hint="Gênero" >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_status"
+                    android:id="@+id/txt_genero"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_tipo"
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_especialidade"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tipo" >
+                android:layout_marginBottom="20dp"
+                android:hint="Especialidade" >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_tipo"
+                    android:id="@+id/txt_especialidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_horario"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Horário" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_horario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 

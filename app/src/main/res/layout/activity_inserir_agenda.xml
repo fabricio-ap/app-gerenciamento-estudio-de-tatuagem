@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.manterusuario.ListarUsuario">
+    tools:context=".view.manteragenda.InserirAgenda">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,8 +13,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:paddingBottom="40dp"
             android:orientation="vertical"
             style="@style/container">
 
@@ -23,45 +24,62 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="35sp"
-                android:text="Listar"
-                style="@style/titulo"/>
+                android:text="Cadastro" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:orientation="vertical"
-            android:gravity="start"
             style="@style/container">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Digite o nome de login do usuário" />
+            <Spinner android:id="@+id/sp_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp" />
 
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_id"
+            <Spinner android:id="@+id/sp_tatuador"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="20dp" />
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_horario"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:placeholderText="Login"
-                app:startIconDrawable="@drawable/lista">
+                android:layout_marginBottom="20dp"
+                android:hint="Horário" >
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_login"
+                    android:id="@+id/txt_horario"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Login"/>
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_detalhes_valor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Valor" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_valor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_listar"
+                android:id="@+id/btn_cadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginTop="20dp"
-                android:text="Listar" />
+                android:layout_marginTop="40dp"
+                android:text="Cadastrar" />
+
+
 
         </LinearLayout>
 

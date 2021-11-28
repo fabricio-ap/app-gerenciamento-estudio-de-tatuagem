@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,12 @@ import com.fabricioaraujo.appcombancodedados.model.dao.DaoUsuario;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.sql.SQLOutput;
+
 public class InserirUsuario extends AppCompatActivity {
 
     private DaoUsuario dao_usuario;
+    private Usuario usuario = null;
 
     private TextInputEditText txt_usuario, txt_senha, txt_status, txt_tipo;
     private Button btn_cadastrar;
@@ -37,18 +41,39 @@ public class InserirUsuario extends AppCompatActivity {
         dao_usuario = new DaoUsuario(this);
 
         // Funções
+        Intent intent = getIntent();
+        if (intent.hasExtra("usuario")) {
+            usuario = (Usuario) intent.getSerializableExtra("usuario");
+            txt_usuario.setText(usuario.getLogin());
+            txt_senha.setText(usuario.getSenha());
+            txt_status.setText(usuario.getStatus());
+            txt_tipo.setText(usuario.getTipo());
+        }
+
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String login = txt_usuario.getText().toString();
-                String senha = txt_senha.getText().toString();
-                String status = txt_status.getText().toString();
-                String tipo = txt_tipo.getText().toString();
+                if (usuario == null) {
+                    String login = txt_usuario.getText().toString();
+                    String senha = txt_senha.getText().toString();
+                    String status = txt_status.getText().toString();
+                    String tipo = txt_tipo.getText().toString();
 
-                Usuario usuario = new Usuario(0, login, senha, status, tipo);
-                long id = dao_usuario.inserir_usuario(usuario);
+                    Usuario usuario = new Usuario(0, login, senha, status, tipo);
+                    long id = dao_usuario.inserir(usuario);
 
-                Snackbar.make(view, "Usuário cadastrado com o id: " + id, Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(view, "Usuário cadastrado com o id: " + id, Snackbar.LENGTH_SHORT).show();
+
+                } else {
+                    usuario.setLogin(txt_usuario.getText().toString());
+                    usuario.setSenha(txt_senha.getText().toString());
+                    usuario.setStatus(txt_status.getText().toString());
+                    usuario.setTipo(txt_tipo.getText().toString());
+
+                    dao_usuario.atualizar(usuario);
+
+                    Snackbar.make(view, "Usuário atualizado", Snackbar.LENGTH_SHORT).show();
+                }
             }
         });
     }

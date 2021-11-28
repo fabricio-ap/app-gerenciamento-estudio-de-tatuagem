@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,16 +13,67 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingTop="40dp"
+            android:paddingBottom="40dp"
+            style="@style/container"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bem vindo!"
+                android:textSize="36dp"
+                android:layout_marginBottom="20dp"
+                style="@style/titulo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
             android:orientation="vertical"
             style="@style/container">
 
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_login"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Login"
+                app:startIconDrawable="@drawable/usuario">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_senha"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Senha"
+                app:startIconDrawable="@drawable/senha" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
-                android:id="@+id/btn_usuario"
+                android:id="@+id/btn_entrar"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_marginTop="40dp"
-                android:text="Usuário" />
+                android:layout_marginTop="20dp"
+                android:text="Entrar" />
 
         </LinearLayout>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.manterusuario.ListarUsuario">
+    tools:context=".view.mantertatuador.BuscarTatuador">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="35sp"
-                android:text="Listar"
+                android:text="Buscar"
                 style="@style/titulo"/>
 
         </LinearLayout>
@@ -39,29 +39,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Digite o nome de login do usuário" />
+                android:text="Digite o ID do usuário" />
 
             <com.google.android.material.textfield.TextInputLayout android:id="@+id/txt_layout_id"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:placeholderText="Login"
-                app:startIconDrawable="@drawable/lista">
+                app:placeholderText="ID"
+                app:startIconDrawable="@drawable/pesquisar">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txt_login"
+                    android:id="@+id/txt_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Login"/>
+                    android:hint="ID"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_listar"
+                android:id="@+id/btn_buscar"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_marginTop="20dp"
-                android:text="Listar" />
+                android:text="Buscar" />
 
         </LinearLayout>
 

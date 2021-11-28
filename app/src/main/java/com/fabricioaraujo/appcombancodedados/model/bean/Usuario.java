@@ -73,11 +73,11 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "\nid = " + id + "\n" +
-                "login = " + login + "\n" +
-                "senha = " + senha + "\n" +
-                "status = " + status + "\n" +
-                "tipo = " + tipo + "\n";
+        return "\nId = " + id + "\n" +
+                "Login = " + login + "\n" +
+                "Senha = " + senha + "\n" +
+                "Status = " + status + "\n" +
+                "Tipo = " + tipo + "\n";
     }
 
 }
