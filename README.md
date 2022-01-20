@@ -1,7 +1,5 @@
 ## App de Gerenciamento de Estúdio de Tatuagem
 
----
-
 Projeto desenvolvido para a faculdade, mais precisamente para a matéria de Desenvolvimento Mobile.
 
 O objetivo do app era executar um CRUD completo para as classes do projeto, e também trabalhar com relação entre tabelas.
